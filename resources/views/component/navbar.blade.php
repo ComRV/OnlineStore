@@ -1,5 +1,5 @@
 <nav class="flex justify-around items-center h-14">
-  <a href="/" class="font-chewy text-3xl text-emerald-500 basis-1/4 text-center">ngebola</a>
+  <header href="/" class="font-chewy text-3xl text-emerald-500 basis-1/4 text-center"><a href="/">ngebola</a></header>
 
   <form class="basis-1/2">
     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
@@ -13,7 +13,7 @@
       </div>
       <input type="search" id="default-search"
         class="block p-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-emerald-500 focus:border-emerald-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-emerald-500 dark:focus:border-emerald-500"
-        placeholder="Search Mockups, Logos..." required="">
+        placeholder="Search Products" required="">
       <button type="submit"
         class="text-white absolute right-0 bottom-[1px] bg-emerald-500 hover:bg-emerald-600 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800">Search</button>
     </div>

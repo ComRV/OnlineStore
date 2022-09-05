@@ -16,6 +16,10 @@
 <body>
     <section>
         @include('component.navbar')
+        <main class="flex">
+            @include('component.filter')
+            @include('component.products')
+        </main>
     </section>
 </body>
 
