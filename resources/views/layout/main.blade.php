@@ -13,12 +13,11 @@
     <title>{{ $title }}</title>
 </head>
 
-<body class="scrollbar-thin scrollbar-thumb-gray-300 scrollbar-thumb-rounded-lg hover:scrollbar-thumb-gray-400">
+<body class="scrollbar-thin scrollbar-thumb-slate-400 scrollbar-thumb-rounded-lg hover:scrollbar-thumb-slate-500">
     <section>
-        @include('component.navbar')
+        @include('component.partial.navbar')
         <main class="flex">
-            @include('component.filter')
-            @include('component.products')
+            @yield('container')
         </main>
     </section>
 </body>

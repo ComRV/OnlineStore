@@ -1,0 +1,1 @@
+<h1 class="mt-20">ini adalah detail product</h1>

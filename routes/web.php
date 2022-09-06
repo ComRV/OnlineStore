@@ -14,7 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout.home', [
+    return view('container.home', [
         "title" => "Home"
+    ]);
+});
+
+Route::get('/detail', function() {
+    return view('container.detail', [
+        "title" => "Detail"
     ]);
 });

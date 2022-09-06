@@ -32,19 +32,22 @@
     </span>
   </div>
   <div class="my-3">
-    <span class="px-1 font-semibold w-full rounded-t-lg border-gray-200 dark:border-gray-600">Latest</span>
-    <span class="px-1 font-semibold w-full border-gray-200 dark:border-gray-600">Popular</span>
+    <a href="#"
+      class="mx-2 font-semibold w-full rounded-t-lg border-gray-200 dark:border-gray-600 hover:border-b-4 hover:border-b-gray-800">Latest</a>
+    <span class="font-extrabold">|</span>
+    <a href="#"
+      class="mx-2 font-semibold w-full border-gray-200 dark:border-gray-600 hover:border-b-4 hover:border-b-gray-800">Popular</a>
   </div>
 
   {{-- List product --}}
   <div class="grid gap-x-8 gap-y-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
     <div
       class="max-w-[13em] h-[100%] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
+      <a href="/detail">
         <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
       </a>
       <div class="p-5">
-        <a href="#">
+        <a href="/detail">
           <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
           </h5>
         </a>
