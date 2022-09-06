@@ -13,7 +13,7 @@
     <title>{{ $title }}</title>
 </head>
 
-<body>
+<body class="scrollbar-thin scrollbar-thumb-gray-400 scrollbar-thumb-rounded-lg">
     <section>
         @include('component.navbar')
         <main class="flex">

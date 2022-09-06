@@ -12,5 +12,8 @@ module.exports = {
             chewy: ["Chewy", "cursive"],
         },
     },
-    plugins: [require("flowbite/plugin")],
+    plugins: [
+        require("flowbite/plugin"),
+        require("tailwind-scrollbar")({ nocompatible: true }),
+    ],
 };
