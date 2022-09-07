@@ -10,6 +10,7 @@ module.exports = {
         extend: {},
         fontFamily: {
             chewy: ["Chewy", "cursive"],
+            roboto: ["Roboto", "sans-serif"],
         },
     },
     plugins: [
