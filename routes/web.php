@@ -24,3 +24,15 @@ Route::get('/detail', function() {
         "title" => "Detail"
     ]);
 });
+
+Route::get('/login', function() {
+    return view('container.login', [
+        "title" => "Login"
+    ]);
+});
+
+Route::get('/registration', function() {
+    return view('container.registration', [
+        "title" => "Registration"
+    ]);
+});

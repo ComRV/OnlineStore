@@ -1,4 +1,4 @@
-<nav class="fixed w-full bg-white">
+<nav class="fixed w-full bg-white z-10">
   <div class="flex justify-around items-center h-14">
     <header href="/" class="font-chewy text-3xl text-emerald-500 basis-1/4 text-center"><a href="/">ngebola</a></header>
 
@@ -29,22 +29,21 @@
           </path>
         </svg>
       </button>
-      <button type="button"
+      {{-- <button type="button"
         class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
         id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
         data-dropdown-placement="bottom">
         <span class="sr-only">Open user menu</span>
         <img class="w-9 h-9 rounded-full" src="img/profile.jpg" alt="user photo">
-      </button>
+      </button> --}}
       <!-- Dropdown menu -->
-      <div
+      {{-- <div
         class="hidden z-50 my-4 text-base list-none bg-gray-50 rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
         id="user-dropdown">
         <div class="py-3 px-4">
-          {{-- <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+          <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
           <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
-          --}}
-          <span class="block text-sm text-gray-900 dark:text-white">Guest</span>
+
         </div>
         <ul class="py-1" aria-labelledby="user-menu-button">
           <li>
@@ -61,7 +60,14 @@
               out</a>
           </li>
         </ul>
-      </div>
+      </div> --}}
+      <a href="/login" class="flex">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+        </svg>
+        <p class="ml-1 mt-0.5 font-semibold text-[17px]">Login</p>
+      </a>
     </div>
   </div>
 </nav>

@@ -2,7 +2,7 @@
   <div class="grid md:h-[160vh] grid-rows-3 w-screen md:grid-cols-4 md:grid-rows-4">
     <div
       class="md:col-span-3 pb-14 md:pb-0 border-r-2 row-span-3 flex flex-col items-center md:overflow-y-auto md:scrollbar-none md:row-span-4">
-      <a href="/" class="absolute top-[12.5%] left-[8%] hidden md:block -z-10">
+      <a href="/" class="absolute top-[12.5%] left-[8%] hidden md:block">
         <svg class="w-7 h-7 opacity-75 hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -17,13 +17,13 @@
       <p class="font-roboto text-lg font-medium my-2">Rp. 1.033.677</p>
       <div class="inline-flex rounded-md shadow-sm">
         <button
-          class="py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-l-lg border border-gray-200 hover:bg-gray-200 active:bg-gray-300">-</button>
-        <p class="py-2 px-14 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200">1</p>
+          class="py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-300 active:bg-gray-400">-</button>
+        <p class="py-2 px-14 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-300">1</p>
         <button
-          class="py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-r-lg border border-gray-200 hover:bg-gray-200 active:bg-gray-300">+</button>
+          class="py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-300 active:bg-gray-400">+</button>
       </div>
       <button type="button"
-        class="text-gray-900 bg-gray-200 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-14 py-1.5 text-center inline-flex items-center dark:focus:ring-gray-500 my-3">ADD
+        class="text-gray-900 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-14 py-1.5 text-center inline-flex items-center dark:focus:ring-gray-500 my-3">ADD
         TO CARD</button>
       <p class="w-[20em] md:w-[33em]">This Jersey pairs design details with sweat-wicking fabric to give you a
         game-ready look

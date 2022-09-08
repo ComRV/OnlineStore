@@ -14,7 +14,8 @@
     <title>{{ $title }}</title>
 </head>
 
-<body class="scrollbar-thin scrollbar-thumb-slate-400 scrollbar-thumb-rounded-lg hover:scrollbar-thumb-slate-500">
+<body
+    class="scrollbar-none md:scrollbar-thin scrollbar-thumb-slate-400 scrollbar-thumb-rounded-lg hover:scrollbar-thumb-slate-500">
     <section>
         @include('component.partial.navbar')
         <main class="flex">
