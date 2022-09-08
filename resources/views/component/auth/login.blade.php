@@ -1,6 +1,13 @@
 <main class="min-w-full h-screen flex flex-col justify-center">
   <form class="bg-gray-50 m-auto rounded-lg border border-gray-200 shadow-md px-20 py-14">
+    @csrf
     <header class="font-roboto text-2xl font-semibold mb-5">Welcome to ngebola</header>
+    @if (session()->has('success'))
+    <div class="p-3 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+      role="alert">
+      <span class="font-medium">{{ session('success') }}</span>
+    </div>
+    @endif
     <div class="mb-6">
       <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email or
         Username</label>
@@ -22,7 +29,7 @@
       <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
     </div>
     <button type="submit"
-      class="text-white bg-emerald-600 hover:bg-emerald-700 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm w-full sm:w-auto px-[7.5em] py-2 text-center dark:bg-emerald-600 dark:hover:bg-emerald-600 dark:focus:ring-emerald-700">Login</button>
+      class="text-white bg-emerald-600 hover:bg-emerald-700 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm w-full px-[7.5em] py-2 text-center dark:bg-emerald-600 dark:hover:bg-emerald-600 dark:focus:ring-emerald-700">Login</button>
     <p class="text-xs mt-2 text-center text-gray-800">Don't have an account? <a
         class="text-emerald-600 hover:opacity-90" href="/registration">Sign Up</a></p>
   </form>
