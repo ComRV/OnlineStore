@@ -29,38 +29,39 @@
           </path>
         </svg>
       </button>
-      {{-- <button type="button"
+      @auth
+      <button type="button"
         class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
         id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
         data-dropdown-placement="bottom">
         <span class="sr-only">Open user menu</span>
         <img class="w-9 h-9 rounded-full" src="img/profile.jpg" alt="user photo">
-      </button> --}}
-      <!-- Dropdown menu -->
-      {{-- <div
-        class="hidden z-50 my-4 text-base list-none bg-gray-50 rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
-        id="user-dropdown">
-        <div class="py-3 px-4">
-          <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
-          <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
 
+        <!-- Dropdown menu -->
+        <div
+          class="hidden z-50 my-4 text-base list-none bg-gray-50 rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+          id="user-dropdown">
+          <div class="py-3 px-4">
+            <span class="block text-sm text-gray-900 dark:text-white">{{ auth()->user()->name }}</span>
+          </div>
+          <ul class="py-1" aria-labelledby="user-menu-button">
+            <li>
+              <a href="#"
+                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+            </li>
+            <li>
+              <a href="/logout"
+                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
+                out</a>
+            </li>
+          </ul>
         </div>
-        <ul class="py-1" aria-labelledby="user-menu-button">
-          <li>
-            <a href="#"
-              class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
-              out</a>
-          </li>
-        </ul>
-      </div> --}}
+      </button>
+      @else
       <a href="/login" class="flex">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -68,6 +69,7 @@
         </svg>
         <p class="ml-1 mt-0.5 font-semibold text-[17px]">Login</p>
       </a>
+      @endauth
     </div>
   </div>
 </nav>

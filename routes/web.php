@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
 
@@ -26,11 +27,8 @@ Route::get('/detail', function() {
     ]);
 });
 
-Route::get('/login', function() {
-    return view('container.login', [
-        "title" => "Login"
-    ]);
-});
-
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'store']);
+Route::get('/logout', [LoginController::class, 'logout']);
 Route::get('/registration', [RegistrationController::class, 'index']);
 Route::post('/registration', [RegistrationController::class, 'store']);
