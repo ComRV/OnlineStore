@@ -27,6 +27,24 @@ Route::get('/detail', function() {
     ]);
 });
 
+Route::get('/settings/profile', function() {
+    return view('container.settings', [
+        "title" => "Profil"
+    ]);
+});
+
+Route::get('/settings/changepassword', function() {
+    return view('container.changepassword', [
+        "title" => "Change Password",
+    ]);
+});
+
+Route::get('/settings/changepin', function() {
+    return view('container.changepin', [
+        "title" => "Change PIN",
+    ]);
+});
+
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'store']);
 Route::get('/logout', [LoginController::class, 'logout']);
