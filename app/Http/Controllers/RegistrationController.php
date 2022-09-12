@@ -33,4 +33,53 @@ class RegistrationController extends Controller
         
         return redirect("/login")->with('success', 'Registration successfull!');
     }
+
+    public function update(Request $request) {
+        $validateData = $request->validate([
+            "name" => "max:255",
+            "username" => "min:5",
+            "email" => "email:dns",
+            "alamat" => "max:255"
+        ]);
+        $user = User::find(auth()->user()->id);
+        $user->name = ucwords($validateData['name']);
+        $user->username = $validateData['username'];
+        $user->email = $validateData['email'];
+        $user->alamat = ucwords($validateData['alamat']);
+        $user->save();
+
+        return back()->with('success', 'Update data successful');
+    }
+
+    public function changepassword(Request $request) {
+        $validateData = $request->validate([
+            "current_password" => "required",
+            "new_password" => "required|min:8|max:255",
+            "confirm_password" => "required|min:8|max:255|same:new_password"
+        ]);
+        if (!Hash::check($request->current_password, auth()->user()->password)) {
+            return back()->with('matchpassword', 'current password doesnt match');
+        }
+
+        $user = User::find(auth()->user()->id);
+        $user->password = Hash::make($validateData['confirm_password']);
+        $user->save();
+
+        return back()->with('success', "Password updated");
+    }
+
+    public function changepin(Request $request) {
+        $validateData = $request->validate([
+            "new_pin" => "required|numeric|digits:6",
+            "confirm_pin" => "required|numeric|digits:6|same:new_pin"
+        ]);
+
+        if (auth()->user()->PIN !== null && !Hash::check($request->current_pin, auth()->user()->PIN)) {
+            return back()->with('matchpin', 'current pin doesnt match');
+        }
+        $user = User::find(auth()->user()->id);
+        $user->PIN = Hash::make($validateData['confirm_pin']);
+        $user->save();
+        return back()->with('success', "PIN updated");
+    }
 }

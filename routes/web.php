@@ -15,11 +15,44 @@ use App\Http\Controllers\RegistrationController;
 |
 */
 
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', function() {
+        return view('container.settings', [
+            "title" => "Profil"
+        ]);
+    });
+    
+    Route::get('/changepassword', function() {
+        return view('container.changepassword', [
+            "title" => "Change Password",
+        ]);
+    });
+    
+    Route::get('/changepin', function() {
+        return view('container.changepin', [
+            "title" => "Change PIN",
+        ]);
+    });
+    
+    Route::patch('/profile', [RegistrationController::class, 'update']);
+    Route::patch('/changepassword', [RegistrationController::class, 'changepassword']);
+    Route::patch('/changepin', [RegistrationController::class, 'changepin']);
+    Route::get('/logout', [LoginController::class, 'logout']);
+});
+
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [LoginController::class, 'index'])->name('login');
+    Route::post('/login', [LoginController::class, 'store']);
+    Route::get('/registration', [RegistrationController::class, 'index']);
+    Route::post('/registration', [RegistrationController::class, 'store']);
+});
+
 Route::get('/', function () {
     return view('container.home', [
         "title" => "Home"
     ]);
 });
+
 
 Route::get('/detail', function() {
     return view('container.detail', [
@@ -27,26 +60,4 @@ Route::get('/detail', function() {
     ]);
 });
 
-Route::get('/settings/profile', function() {
-    return view('container.settings', [
-        "title" => "Profil"
-    ]);
-});
 
-Route::get('/settings/changepassword', function() {
-    return view('container.changepassword', [
-        "title" => "Change Password",
-    ]);
-});
-
-Route::get('/settings/changepin', function() {
-    return view('container.changepin', [
-        "title" => "Change PIN",
-    ]);
-});
-
-Route::get('/login', [LoginController::class, 'index']);
-Route::post('/login', [LoginController::class, 'store']);
-Route::get('/logout', [LoginController::class, 'logout']);
-Route::get('/registration', [RegistrationController::class, 'index']);
-Route::post('/registration', [RegistrationController::class, 'store']);

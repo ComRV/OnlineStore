@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function(Blueprint $table){
-            $table->integer('saldo');
+            $table->integer('saldo')->default(0);
+            $table->string('alamat')->nullable();
         });
     }
 

@@ -4,7 +4,7 @@
       <ul class="space-y-2">
         <li>
           <button type="button"
-            class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+            class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group dark:text-white dark:hover:bg-gray-700"
             aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
@@ -19,19 +19,22 @@
                 clip-rule="evenodd"></path>
             </svg>
           </button>
-          <ul id="dropdown-example" class="hidden py-2 space-y-2">
+          <ul id="dropdown-example" class="py-2 space-y-2">
             <li>
-              <a href="/settings/profile"
-                class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Profile</a>
+              <a href="/profile" class="flex @if (request()->path() === 'profile') bg-gray-200
+                @endif items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group
+                hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700">Profile</a>
             </li>
             <li>
-              <a href="/settings/changepassword"
-                class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Change
+              <a href="/changepassword"
+                class="flex @if (request()->path() === 'changepassword') bg-gray-200
+                @endif items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700">Change
                 Password</a>
             </li>
             <li>
-              <a href="/settings/changepin"
-                class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Change
+              <a href="/changepin"
+                class="flex @if (request()->path() === 'changepin') bg-gray-200
+                @endif items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700">Change
                 PIN</a>
             </li>
           </ul>
