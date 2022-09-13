@@ -13,7 +13,7 @@
         <li class="text-2xl font-semibold font-roboto">Liverpool Away Jersey</li>
         <li class="text-lg text-gray-800 font-medium font-roboto">2022-23</li>
       </ul>
-      <img class="max-w-[15em] bg-emerald-50 h-auto rounded-lg" src="/img/liverpooljersey.jpg" alt="liverpool away">
+      <img class="max-w-[13em] bg-emerald-50 h-auto rounded-lg" src="/img/liverpoolhome.jpg" alt="liverpool away">
       <p class="font-roboto text-lg font-medium my-2">Rp. 1.033.677</p>
       <div class="inline-flex rounded-md shadow-sm">
         <button

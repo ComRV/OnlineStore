@@ -42,9 +42,9 @@
   {{-- List product --}}
   <div class="grid gap-x-8 gap-y-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
     <div
-      class="max-w-[13em] h-[100%] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+      class="max-w-[13em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
       <a href="/detail">
-        <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
+        <img class="rounded-t-lg w-[9em] m-auto py-10" src="img/liverpoolhome.jpg" alt="">
       </a>
       <div class="p-5">
         <a href="/detail">
@@ -59,11 +59,11 @@
     </div>
     <div
       class="max-w-[13em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
+      <a href="/detail">
+        <img class="rounded-t-lg w-[9em] m-auto py-10" src="img/realmadridhome.jpg" alt="">
       </a>
       <div class="p-5">
-        <a href="#">
+        <a href="/detail">
           <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
           </h5>
         </a>
@@ -75,140 +75,11 @@
     </div>
     <div
       class="max-w-[13em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
+      <a href="/detail">
+        <img class="rounded-t-lg w-[9em] m-auto py-10" src="img/intermilanhome.jpg" alt="">
       </a>
       <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
-          </h5>
-        </a>
-        <div>
-          <p class="font-normal text-sm text-gray-700 dark:text-gray-400">Price : </p>
-          <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
-        </div>
-      </div>
-    </div>
-    <div
-      class="max-w-[13em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
-      </a>
-      <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
-          </h5>
-        </a>
-        <div>
-          <p class="font-normal text-sm text-gray-700 dark:text-gray-400">Price : </p>
-          <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
-        </div>
-      </div>
-    </div>
-    <div
-      class="max-w-[13em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
-      </a>
-      <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
-          </h5>
-        </a>
-        <div>
-          <p class="font-normal text-sm text-gray-700 dark:text-gray-400">Price : </p>
-          <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
-        </div>
-      </div>
-    </div>
-    <div
-      class="max-w-[13em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
-      </a>
-      <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
-          </h5>
-        </a>
-        <div>
-          <p class="font-normal text-sm text-gray-700 dark:text-gray-400">Price : </p>
-          <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
-        </div>
-      </div>
-    </div>
-    <div
-      class="max-w-[13em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
-      </a>
-      <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
-          </h5>
-        </a>
-        <div>
-          <p class="font-normal text-sm text-gray-700 dark:text-gray-400">Price : </p>
-          <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
-        </div>
-      </div>
-    </div>
-    <div
-      class="max-w-[13em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
-      </a>
-      <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
-          </h5>
-        </a>
-        <div>
-          <p class="font-normal text-sm text-gray-700 dark:text-gray-400">Price : </p>
-          <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
-        </div>
-      </div>
-    </div>
-    <div
-      class="max-w-[13em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
-      </a>
-      <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
-          </h5>
-        </a>
-        <div>
-          <p class="font-normal text-sm text-gray-700 dark:text-gray-400">Price : </p>
-          <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
-        </div>
-      </div>
-    </div>
-    <div
-      class="max-w-[13em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
-      </a>
-      <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
-          </h5>
-        </a>
-        <div>
-          <p class="font-normal text-sm text-gray-700 dark:text-gray-400">Price : </p>
-          <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
-        </div>
-      </div>
-
-    </div>
-    <div
-      class="max-w-[13em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
-      </a>
-      <div class="p-5">
-        <a href="#">
+        <a href="/detail">
           <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
           </h5>
         </a>
