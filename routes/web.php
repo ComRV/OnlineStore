@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
 
@@ -47,17 +48,6 @@ Route::middleware('guest')->group(function () {
     Route::post('/registration', [RegistrationController::class, 'store']);
 });
 
-Route::get('/', function () {
-    return view('container.home', [
-        "title" => "Home"
-    ]);
-});
-
-
-Route::get('/detail', function() {
-    return view('container.detail', [
-        "title" => "Detail"
-    ]);
-});
-
+Route::get('/', [ProductController::class, 'home']);
+Route::get('/detail/{name}', [ProductController::class, 'detail']);
 

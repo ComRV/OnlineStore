@@ -41,54 +41,26 @@
 
   {{-- List product --}}
   <div class="grid gap-x-8 gap-y-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+    @foreach ($products as $product)
     <div
       class="max-w-[13em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <a href="/detail">
-        <img class="rounded-t-lg w-[9em] m-auto py-10" src="img/liverpoolhome.jpg" alt="">
+      <a href="/detail/{{ $product->name }}">
+        <img class="rounded-t-lg w-[9em] m-auto py-10" src="img/{{ $product->image }}.jpg" alt="">
       </a>
       <div class="p-5">
-        <a href="/detail">
-          <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
+        <a href="/detail/{{ $product->name }}">
+          <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">{{ $product->name }}
           </h5>
         </a>
         <div>
           <p class="font-normal text-sm text-gray-700 dark:text-gray-400">Price : </p>
-          <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
+          <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. {{ number_format($product->price,2)
+            }}</h5>
         </div>
       </div>
     </div>
-    <div
-      class="max-w-[13em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <a href="/detail">
-        <img class="rounded-t-lg w-[9em] m-auto py-10" src="img/realmadridhome.jpg" alt="">
-      </a>
-      <div class="p-5">
-        <a href="/detail">
-          <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
-          </h5>
-        </a>
-        <div>
-          <p class="font-normal text-sm text-gray-700 dark:text-gray-400">Price : </p>
-          <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
-        </div>
-      </div>
-    </div>
-    <div
-      class="max-w-[13em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <a href="/detail">
-        <img class="rounded-t-lg w-[9em] m-auto py-10" src="img/intermilanhome.jpg" alt="">
-      </a>
-      <div class="p-5">
-        <a href="/detail">
-          <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
-          </h5>
-        </a>
-        <div>
-          <p class="font-normal text-sm text-gray-700 dark:text-gray-400">Price : </p>
-          <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
-        </div>
-      </div>
-    </div>
-  </div>
+    @endforeach
+
+
 
 </main>

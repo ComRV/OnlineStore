@@ -9,12 +9,10 @@
             d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"></path>
         </svg>
       </a>
-      <ul>
-        <li class="text-2xl font-semibold font-roboto">Liverpool Away Jersey</li>
-        <li class="text-lg text-gray-800 font-medium font-roboto">2022-23</li>
-      </ul>
-      <img class="max-w-[13em] bg-emerald-50 h-auto rounded-lg" src="/img/liverpoolhome.jpg" alt="liverpool away">
-      <p class="font-roboto text-lg font-medium my-2">Rp. 1.033.677</p>
+      <p class="text-lg w-52 font-semibold font-roboto">{{ $detail->name }}</p>
+      <img class="max-w-[13em] bg-emerald-50 h-auto rounded-lg" src="/img/{{ $detail->image }}.jpg"
+        alt="liverpool away">
+      <p class="font-roboto text-lg font-medium my-2">Rp. {{ number_format($detail->price,2) }}</p>
       <div class="inline-flex rounded-md shadow-sm">
         <button
           class="py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-300 active:bg-gray-400">-</button>
@@ -25,110 +23,30 @@
       <button type="button"
         class="text-gray-900 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-14 py-1.5 text-center inline-flex items-center dark:focus:ring-gray-500 my-3">ADD
         TO CARD</button>
-      <p class="w-[20em] md:w-[33em]">This Jersey pairs design details with sweat-wicking fabric to give you a
-        game-ready look
-        inspired by your favorite team. Nike Dri-FIT technology moves sweat away from your skin for quicker evaporation,
-        helping you stay dry and comfortable. Design is modeled after what the pros wear on the field.</p>
+      <p class="w-[20em] md:w-[33em]">{{ $detail->description }}</p>
     </div>
     <div class="flex flex-col items-center overflow-y-auto pb-14 md:pb-0 md:row-span-6 md:scrollbar-none">
       <h1 class="font-roboto text-2xl tracking-wide font-semibold my-4">Recommended</h1>
-      <div class="grid grid-cols-3 grid-rows-2 md:grid-cols-1 md:grid-rows-6 gap-5">
+      <div class="grid grid-cols-3 grid-rows-2 pb-5 md:grid-cols-1 md:grid-rows-6 gap-5">
+        @foreach ($recommended as $item)
         <div
-          class="max-w-[11em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-          <a href="#">
-            <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
+          class="max-w-[12em] -pb-2 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+          <a href="/detail/{{ $item->name }}">
+            <img class="rounded-t-lg w-[10em] m-auto" src="/img/{{ $item->image }}.jpg" alt="">
           </a>
           <div class="p-5">
-            <a href="#">
-              <h5 class="mb-1 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
+            <a href="/detail/{{ $item->name }}">
+              <h5 class="mb-1 font-bold tracking-tight text-gray-900 dark:text-white">{{ $item->name }}
               </h5>
             </a>
-            <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
+            <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. {{ number_format($item->price,2)
+              }}</h5>
             <button type="button"
               class="text-gray-900 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-1.5 text-center inline-flex items-center dark:focus:ring-gray-500 mt-3">ADD
               TO CARD</button>
           </div>
         </div>
-        <div
-          class="max-w-[11em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-          <a href="#">
-            <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
-          </a>
-          <div class="p-5">
-            <a href="#">
-              <h5 class="mb-1 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
-              </h5>
-            </a>
-            <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
-            <button type="button"
-              class="text-gray-900 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-1.5 text-center inline-flex items-center dark:focus:ring-gray-500 mt-3">ADD
-              TO CARD</button>
-          </div>
-        </div>
-        <div
-          class="max-w-[11em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-          <a href="#">
-            <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
-          </a>
-          <div class="p-5">
-            <a href="#">
-              <h5 class="mb-1 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
-              </h5>
-            </a>
-            <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
-            <button type="button"
-              class="text-gray-900 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-1.5 text-center inline-flex items-center dark:focus:ring-gray-500 mt-3">ADD
-              TO CARD</button>
-          </div>
-        </div>
-        <div
-          class="max-w-[11em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-          <a href="#">
-            <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
-          </a>
-          <div class="p-5">
-            <a href="#">
-              <h5 class="mb-1 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
-              </h5>
-            </a>
-            <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
-            <button type="button"
-              class="text-gray-900 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-1.5 text-center inline-flex items-center dark:focus:ring-gray-500 mt-3">ADD
-              TO CARD</button>
-          </div>
-        </div>
-        <div
-          class="max-w-[11em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-          <a href="#">
-            <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
-          </a>
-          <div class="p-5">
-            <a href="#">
-              <h5 class="mb-1 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
-              </h5>
-            </a>
-            <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
-            <button type="button"
-              class="text-gray-900 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-1.5 text-center inline-flex items-center dark:focus:ring-gray-500 mt-3">ADD
-              TO CARD</button>
-          </div>
-        </div>
-        <div
-          class="max-w-[11em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-          <a href="#">
-            <img class="rounded-t-lg" src="img/liverpooljersey.jpg" alt="">
-          </a>
-          <div class="p-5">
-            <a href="#">
-              <h5 class="mb-1 font-bold tracking-tight text-gray-900 dark:text-white">Liverpool Jersey Away 2022-23
-              </h5>
-            </a>
-            <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. 1.033.677</h5>
-            <button type="button"
-              class="text-gray-900 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-1.5 text-center inline-flex items-center dark:focus:ring-gray-500 mt-3">ADD
-              TO CARD</button>
-          </div>
-        </div>
+        @endforeach
       </div>
     </div>
     <div class="ml-8 md:col-span-3 md-row-span-3 h-[30em] overflow-auto scrollbar-none">
