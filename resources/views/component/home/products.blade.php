@@ -41,11 +41,12 @@
 
   {{-- List product --}}
   <div class="grid gap-x-8 gap-y-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+    @if (count($products) > 0)
     @foreach ($products as $product)
     <div
       class="max-w-[13em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
       <a href="/detail/{{ $product->name }}">
-        <img class="rounded-t-lg w-[9em] m-auto py-10" src="img/{{ $product->image }}.jpg" alt="">
+        <img class="rounded-t-lg w-[9em] m-auto py-10" src="/img/{{ $product->image }}.jpg" alt="">
       </a>
       <div class="p-5">
         <a href="/detail/{{ $product->name }}">
@@ -60,7 +61,7 @@
       </div>
     </div>
     @endforeach
-
-
-
+    @else
+    <p class="ml-2 font-semibold text-lg font-roboto text-gray-900">Produk tidak ditemukan</p>
+    @endif
 </main>

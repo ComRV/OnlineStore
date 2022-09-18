@@ -30,19 +30,20 @@
       <div class="grid grid-cols-3 grid-rows-2 pb-5 md:grid-cols-1 md:grid-rows-6 gap-5">
         @foreach ($recommended as $item)
         <div
-          class="max-w-[12em] -pb-2 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+          class="max-w-[12em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
           <a href="/detail/{{ $item->name }}">
-            <img class="rounded-t-lg w-[10em] m-auto" src="/img/{{ $item->image }}.jpg" alt="">
+            <img class="rounded-t-lg w-[10em] py-4 m-auto" src="/img/{{ $item->image }}.jpg" alt="">
           </a>
           <div class="p-5">
             <a href="/detail/{{ $item->name }}">
-              <h5 class="mb-1 font-bold tracking-tight text-gray-900 dark:text-white">{{ $item->name }}
+              <h5 class="mb-1 text-center font-bold tracking-tight text-gray-900 dark:text-white">{{ $item->name }}
               </h5>
             </a>
-            <h5 class="font-bold text-gray-800 tracking-tight dark:text-gray-400">Rp. {{ number_format($item->price,2)
+            <h5 class="font-bold text-center text-gray-800 tracking-tight dark:text-gray-400">Rp. {{
+              number_format($item->price,2)
               }}</h5>
             <button type="button"
-              class="text-gray-900 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-1.5 text-center inline-flex items-center dark:focus:ring-gray-500 mt-3">ADD
+              class="text-gray-900 ml-2.5 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-1.5 text-center inline-flex items-center dark:focus:ring-gray-500 mt-3">ADD
               TO CARD</button>
           </div>
         </div>

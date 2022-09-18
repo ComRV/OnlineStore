@@ -48,6 +48,7 @@ Route::middleware('guest')->group(function () {
     Route::post('/registration', [RegistrationController::class, 'store']);
 });
 
-Route::get('/', [ProductController::class, 'home']);
+Route::get('/', [ProductController::class, 'home'])->name('home');
 Route::get('/detail/{name}', [ProductController::class, 'detail']);
-
+Route::get('/category/{category}', [ProductController::class, 'category']);
+Route::get('/club/{club}', [ProductController::class, 'club']);
