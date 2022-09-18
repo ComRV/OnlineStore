@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Club;
 use App\Models\Products;
-use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\RequestStack;
 
 class ProductController extends Controller
 {
@@ -28,20 +26,18 @@ class ProductController extends Controller
     }
 
     public function category($category) {
-        $product = Category::where('category', $category)->first();
         return view('container.home', [
             "title" => $category,
-            "products" => $product->products,
+            "products" => Category::where('category', $category)->first()->products,
             "category" => Category::all(),
             "club" => Club::all()
         ]);
     }
 
     public function club($club) {
-        $product = Club::where('club', $club)->first();
         return view('container.home', [
             "title" => $club,
-            "products" => $product->products,
+            "products" => Club::where('club', $club)->first()->products,
             "category" => Category::all(),
             "club" => Club::all()
         ]);

@@ -15,24 +15,26 @@
         </li>
       </ul> --}}
 
-      <ul class="pt-4 mt-4 dark:border-gray-700">
+      <ul class="pt-4 mt-1 space-y-1 dark:border-gray-700">
         <p class="font-semibold mb-2">Category</p>
         @foreach ($category as $item)
         <li>
-          <a href="/category/{{ $item->category }}"
-            class="flex items-center p-2 text-sm font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700">
+          <a href="/category/{{ $item->category }}" class="flex items-center p-2 @if ($item->category === request()->segment(2)) bg-gray-200
+            @endif text-sm font-medium text-gray-900 rounded-lg dark:text-white
+            hover:bg-gray-200 dark:hover:bg-gray-700">
             <span class="flex-1 ml-2 whitespace-nowrap">{{ $item->category }}</span>
           </a>
         </li>
         @endforeach
       </ul>
 
-      <ul class="pt-4 pb-24 mt-4 border-t border-gray-200 dark:border-gray-700">
+      <ul class="pt-4 pb-24 mt-4 space-y-1 border-t border-gray-200 dark:border-gray-700">
         <p class="font-semibold mb-2">League</p>
         @foreach ($club as $item)
         <li>
-          <a href="/club/{{ $item->club }}"
-            class="flex items-center p-2 text-sm font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700">
+          <a href="/club/{{ $item->club }}" class="flex items-center p-2  @if ($item->club === request()->segment(2)) bg-gray-200
+            @endif text-sm font-medium text-gray-900 rounded-lg dark:text-white
+            hover:bg-gray-200 dark:hover:bg-gray-700">
             <span class="flex-1 ml-2 whitespace-nowrap">{{ $item->club }}</span>
           </a>
         </li>
