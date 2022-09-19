@@ -1,10 +1,12 @@
 <main class="mt-[5em] ml-[21em]">
+  @if (request()->path() !== "/")
   <div>
     <span id="badge-dismiss-default"
       class="inline-flex items-center py-1 px-2 mr-2 text-sm font-medium text-gray-800 bg-gray-100 rounded dark:bg-gray-200 dark:text-gray-800">
       {{ request()->segment(2) }}
     </span>
   </div>
+  @endif
   <div class="my-3">
     <a href="#"
       class="mx-2 font-semibold w-full rounded-t-lg border-gray-200 dark:border-gray-600 hover:border-b-4 hover:border-b-gray-800">Latest</a>

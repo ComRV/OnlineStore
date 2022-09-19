@@ -9,10 +9,14 @@ use App\Models\Products;
 class ProductController extends Controller
 {
     public function home() {
+        $products = Products::with('category');
+        if (request('search')) {
+            $products->where('name', 'like', '%'.request('search'). '%');
+        }
         
         return view('container.home', [
             "title" => "Home",
-            "products" => Products::with('category')->get(),
+            "products" => $products->get(),
             "category" => Category::all(),
             "club" => Club::all()
         ]);
