@@ -15,10 +15,13 @@
       <p class="font-roboto text-lg font-medium my-2">Rp. {{ number_format($detail->price,2) }}</p>
       <div class="inline-flex rounded-md shadow-sm">
         <button
-          class="py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-300 active:bg-gray-400">-</button>
-        <p class="py-2 px-14 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-300">1</p>
+          class="py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-300 active:bg-gray-400"
+          onclick="min()">-</button>
+        <p class="py-2 px-14 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-300" id="qty">1
+        </p>
         <button
-          class="py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-300 active:bg-gray-400">+</button>
+          class="py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-300 active:bg-gray-400"
+          onclick="plus()">+</button>
       </div>
       <button type="button"
         class="text-gray-900 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-14 py-1.5 text-center inline-flex items-center dark:focus:ring-gray-500 my-3">ADD

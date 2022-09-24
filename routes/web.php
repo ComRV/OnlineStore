@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -34,7 +35,7 @@ Route::middleware('auth')->group(function () {
             "title" => "Change PIN",
         ]);
     });
-    
+    Route::get('/admin/products', [AdminController::class, 'products']);
     Route::patch('/profile', [RegistrationController::class, 'update']);
     Route::patch('/changepassword', [RegistrationController::class, 'changepassword']);
     Route::patch('/changepin', [RegistrationController::class, 'changepin']);

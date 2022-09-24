@@ -9,14 +9,14 @@ use App\Models\Products;
 class ProductController extends Controller
 {
     public function home() {
-        $products = Products::with('category');
+        $products = Products::all();
         if (request('search')) {
             $products->where('name', 'like', '%'.request('search'). '%');
         }
         
         return view('container.home', [
             "title" => "Home",
-            "products" => $products->get(),
+            "products" => $products->load('category','club'),
             "category" => Category::all(),
             "club" => Club::all()
         ]);

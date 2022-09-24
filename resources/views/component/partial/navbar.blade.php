@@ -12,9 +12,9 @@
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
         </div>
-        <input type="text" id="search"
+        <input type="search" id="search"
           class="block p-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-emerald-500 focus:border-emerald-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-emerald-500 dark:focus:border-emerald-500"
-          placeholder="Search Products" name="search">
+          placeholder="Search Products" name="search" value="{{ request('search') }}">
         <button type="submit"
           class="text-white absolute right-0 bottom-[1px] bg-emerald-500 hover:bg-emerald-600 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800">Search</button>
       </div>
@@ -34,14 +34,16 @@
         id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
         data-dropdown-placement="bottom">
         <span class="sr-only">Open user menu</span>
-        <img class="w-9 h-9 rounded-full" src="img/profile.jpg" alt="user photo">
+        <img class="w-9 h-9 rounded-full" src="/img/profile.jpg" alt="user photo">
 
         <!-- Dropdown menu -->
         <div
           class="hidden z-50 my-4 text-base list-none bg-gray-50 rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
           id="user-dropdown">
           <div class="py-3 px-4">
-            <span class="block text-sm text-gray-900 dark:text-white">{{ auth()->user()->name }}</span>
+            <span class="block text-sm text-gray-900 dark:text-white">{{ auth()->user()->name }} @can('admin')
+              (Admin) @endcan
+            </span>
             <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">Saldo Rp.
               {{ number_format(auth()->user()->saldo, 2) }}</span>
           </div>
