@@ -46,8 +46,8 @@
             {{ number_format($product->price,2) }}
           </td>
           <td class="flex items-center py-4 px-6 space-x-3">
-            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-            <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
+            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-800">Edit</a>
+            <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:text-red-800">Remove</a>
           </td>
         </tr>
         @endforeach

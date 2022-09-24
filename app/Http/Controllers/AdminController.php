@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Products;
+use App\Models\Category;
+use App\Models\Club;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -14,6 +16,14 @@ class AdminController extends Controller
             "title" => "Product (admin)",
             "products" => $products->load('category', 'club')
         ]);
+    }
 
+    public function addproduct() {
+        $this->authorize('admin');
+        return view('container.addproduct', [
+            "title" => "Add Product",
+            "category" => Category::all(),
+            "club" => Club::all()
+        ]);
     }
 }
