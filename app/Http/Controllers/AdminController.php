@@ -26,4 +26,23 @@ class AdminController extends Controller
             "club" => Club::all()
         ]);
     }
+
+    public function create(Request $request) {
+        $this->authorize('admin');
+        $validated = $request->validate([
+            "name" => "required|max:50",
+            "price" => "required",
+            "description" => "required|max:255",
+            "image" => "required|image|file|max:1024",
+        ]);
+
+        if($request->file('image')) {
+            $validated['image'] = ltrim($request->file('image')->store('img', ['disk' => 'public']), "img/");
+        }
+        $validated['category_id'] = Category::where('category', $request['category_id'])->get()->first()->id;
+        $validated['club_id'] = Club::where('club', $request['club_id'])->get()->first()->id;
+        $validated['price'] = intval($validated['price']);
+        Products::create($validated);
+        return back()->with('success', 'Product created');
+    }
 }

@@ -30,7 +30,7 @@
     <div
       class="max-w-[13em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
       <a href="/detail/{{ $product->name }}">
-        <img class="rounded-t-lg w-[9em] m-auto py-10" src="/img/{{ $product->image }}.jpg" alt="">
+        <img class="rounded-t-lg w-[9em] m-auto py-10" src="/img/{{ $product->image }}" alt="">
       </a>
       <div class="p-5">
         <a href="/detail/{{ $product->name }}">

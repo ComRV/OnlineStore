@@ -10,8 +10,7 @@
         </svg>
       </a>
       <p class="text-lg w-52 font-semibold font-roboto">{{ $detail->name }}</p>
-      <img class="max-w-[13em] bg-emerald-50 h-auto rounded-lg" src="/img/{{ $detail->image }}.jpg"
-        alt="liverpool away">
+      <img class="max-w-[13em] bg-emerald-50 h-auto rounded-lg" src="/img/{{ $detail->image }}" alt="liverpool away">
       <p class="font-roboto text-lg font-medium my-2">Rp. {{ number_format($detail->price,2) }}</p>
       <div class="inline-flex rounded-md shadow-sm">
         <button
@@ -35,7 +34,7 @@
         <div
           class="max-w-[12em] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
           <a href="/detail/{{ $item->name }}">
-            <img class="rounded-t-lg w-[10em] py-4 m-auto" src="/img/{{ $item->image }}.jpg" alt="">
+            <img class="rounded-t-lg w-[10em] py-4 m-auto" src="/img/{{ $item->image }}" alt="">
           </a>
           <div class="p-5">
             <a href="/detail/{{ $item->name }}">

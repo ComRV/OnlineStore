@@ -46,6 +46,8 @@
             {{ number_format($product->price,2) }}
           </td>
           <td class="flex items-center py-4 px-6 space-x-3">
+            <a href="/detail/{{ $product->name }}"
+              class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-800">Show</a>
             <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-800">Edit</a>
             <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:text-red-800">Remove</a>
           </td>

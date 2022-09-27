@@ -37,6 +37,7 @@ Route::middleware('auth')->group(function () {
     });
     Route::get('/admin/products', [AdminController::class, 'products']);
     Route::get('/admin/products/add', [AdminController::class, 'addproduct']);
+    Route::post('/admin/products/add', [AdminController::class, 'create']);
     Route::patch('/profile', [RegistrationController::class, 'update']);
     Route::patch('/changepassword', [RegistrationController::class, 'changepassword']);
     Route::patch('/changepin', [RegistrationController::class, 'changepin']);
