@@ -8,6 +8,12 @@
     </svg>
     Add Product
   </a>
+  @if (session()->has('success'))
+  <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+    role="alert">
+    <span class="font-medium">{{ session('success') }}
+  </div>
+  @endif
   <div
     class="overflow-x-auto relative shadow-md pb-10 sm:rounded-lg scrollbar-thin scrollbar-thumb-gray-400 scrollbar-thumb-rounded-lg hover:scrollbar-thumb-gray-500">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -50,7 +56,12 @@
               class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-800">Show</a>
             <a href="/admin/products/edit/{{ $product->name }}"
               class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-800">Edit</a>
-            <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:text-red-800">Remove</a>
+            <form action="/admin/products/delete/{{ $product->id }}" method="POST">
+              @csrf
+              @method('delete')
+              <button class="font-medium text-red-600 dark:text-red-500 hover:text-red-800"
+                onclick="return confirm('Are you sure?')">Remove</button>
+            </form>
           </td>
         </tr>
         @endforeach

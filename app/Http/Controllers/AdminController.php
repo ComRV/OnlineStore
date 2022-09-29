@@ -76,4 +76,10 @@ class AdminController extends Controller
         Products::where('id', $request->id)->update($validated);
         return back()->with('success', 'Update Data Successful');
     }
+
+    public function delete($name) {
+        $this->authorize('admin');
+        Products::destroy($name);
+        return redirect('/admin/products')->with('success', 'Delete product successful');
+    }
 }
