@@ -6,6 +6,7 @@ use App\Models\Products;
 use App\Models\Category;
 use App\Models\Club;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class AdminController extends Controller
 {
@@ -16,6 +17,17 @@ class AdminController extends Controller
             "title" => "Product (admin)",
             "products" => $products->load('category', 'club')
         ]);
+    }
+
+    public function productsedit($product) {
+        $this->authorize('admin');
+        return view('container.addproduct', [
+            "title" => "Update : ". $product,
+            "category" => Category::all(),
+            "club" => Club::all(),
+            "product" => Products::where('name',$product)->first()
+        ]);
+
     }
 
     public function addproduct() {
@@ -44,5 +56,24 @@ class AdminController extends Controller
         $validated['price'] = intval($validated['price']);
         Products::create($validated);
         return back()->with('success', 'Product created');
+    }
+
+    public function update(Request $request) {
+        $this->authorize('admin');
+        $validated = $request->validate([
+            "name" => "required|max:50",
+            "price" => "required",
+            "description" => "required|max:255",
+            "image" => "image|file|max:1024|unique:products"
+        ]);
+        if ($request->file('image')) {
+            File::delete(public_path("img/$request->oldimage"));
+            $validated['image'] = ltrim($request->file('image')->store('img', ['disk' => 'public']), "img/");
+        }
+        $validated['category_id'] = Category::where('category', $request['category_id'])->get()->first()->id;
+        $validated['club_id'] = Club::where('club', $request['club_id'])->get()->first()->id;
+        $validated['price'] = intval($validated['price']);
+        Products::where('id', $request->id)->update($validated);
+        return back()->with('success', 'Update Data Successful');
     }
 }

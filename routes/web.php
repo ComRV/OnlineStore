@@ -38,6 +38,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/products', [AdminController::class, 'products']);
     Route::get('/admin/products/add', [AdminController::class, 'addproduct']);
     Route::post('/admin/products/add', [AdminController::class, 'create']);
+    Route::get('/admin/products/edit/{product}', [AdminController::class, 'productsedit']);
+    Route::patch('/admin/products/edit', [AdminController::class, 'update']);
     Route::patch('/profile', [RegistrationController::class, 'update']);
     Route::patch('/changepassword', [RegistrationController::class, 'changepassword']);
     Route::patch('/changepin', [RegistrationController::class, 'changepin']);
