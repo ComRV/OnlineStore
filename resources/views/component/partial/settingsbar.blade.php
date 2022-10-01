@@ -64,16 +64,6 @@
                 @endif items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group
                 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700">Products</a>
             </li>
-            <li>
-              <a href="/changepassword"
-                class="flex @if (request()->path() === 'changepassword') bg-gray-200
-                @endif items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700">Category</a>
-            </li>
-            <li>
-              <a href="/changepin"
-                class="flex @if (request()->path() === 'changepin') bg-gray-200
-                @endif items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700">League</a>
-            </li>
           </ul>
         </li>
         @endcan

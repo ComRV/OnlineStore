@@ -40,6 +40,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/admin/products/add', [AdminController::class, 'create']);
     Route::get('/admin/products/edit/{product}', [AdminController::class, 'productsedit']);
     Route::patch('/admin/products/edit', [AdminController::class, 'update']);
+    Route::post('/comment/{product}', [ProductController::class, 'comment']);
     Route::delete('/admin/products/delete/{name}', [AdminController::class, 'delete']);
     Route::patch('/profile', [RegistrationController::class, 'update']);
     Route::patch('/changepassword', [RegistrationController::class, 'changepassword']);

@@ -60,7 +60,7 @@
               @csrf
               @method('delete')
               <button class="font-medium text-red-600 dark:text-red-500 hover:text-red-800"
-                onclick="return confirm('Are you sure?')">Remove</button>
+                onclick="return confirm('Are you sure delete {{ $product->name }}?')">Remove</button>
             </form>
           </td>
         </tr>

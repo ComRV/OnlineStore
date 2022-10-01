@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Club;
+use App\Models\Comment;
 use App\Models\Products;
+use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
@@ -22,10 +24,12 @@ class ProductController extends Controller
         ]);
     }
     public function detail($name) {
+        $product = Products::where('name', $name)->first(); 
         return view('container.detail', [
             "title" => "Detail",
-            "detail" => Products::where('name', $name)->get()[0],
-            "recommended" => Products::inRandomOrder()->limit(6)->get()
+            "detail" => $product,
+            "recommended" => Products::inRandomOrder()->limit(6)->get(),
+            "comments" => $product->comment->load('user')
         ]);
     }
 
@@ -45,5 +49,15 @@ class ProductController extends Controller
             "category" => Category::all(),
             "club" => Club::all()
         ]);
+    }
+
+    public function comment(Request $request, $product) {
+        $validate = $request->validate([
+            "comment" => "required|max:255"
+        ]);
+        $validate['user_id'] = auth()->user()->id;
+        $validate['products_id'] = Products::where('name', $product)->get()->first()->id;
+        Comment::create($validate);
+        return back();
     }
 }

@@ -74,7 +74,7 @@ class AdminController extends Controller
         $validated['club_id'] = Club::where('club', $request['club_id'])->get()->first()->id;
         $validated['price'] = intval($validated['price']);
         Products::where('id', $request->id)->update($validated);
-        return back()->with('success', 'Update Data Successful');
+        return back()->with('success', 'Update product successful');
     }
 
     public function delete($name) {

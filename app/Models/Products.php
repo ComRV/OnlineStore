@@ -17,4 +17,8 @@ class Products extends Model
     public function club() {
         return $this->belongsTo(Club::class, 'club_id');
     }
+
+    public function comment() {
+        return $this->hasMany(Comment::class);
+    }
 }
