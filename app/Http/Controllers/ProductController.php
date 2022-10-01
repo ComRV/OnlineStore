@@ -53,7 +53,7 @@ class ProductController extends Controller
 
     public function comment(Request $request, $product) {
         $validate = $request->validate([
-            "comment" => "required|max:255"
+            "comment" => "required"
         ]);
         $validate['user_id'] = auth()->user()->id;
         $validate['products_id'] = Products::where('name', $product)->get()->first()->id;

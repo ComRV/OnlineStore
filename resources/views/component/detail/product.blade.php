@@ -65,7 +65,7 @@
             @enderror
             <textarea id="comment" rows="4" name="comment"
               class="px-0 w-full text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
-              placeholder="Write a comment..." required></textarea>
+              placeholder="Write a comment as {{ auth()->user()->name }}....." required></textarea>
           </div>
           <div class="flex justify-between items-center py-2 px-3 border-t dark:border-gray-600">
             <button type="submit"
@@ -76,6 +76,7 @@
         </div>
       </form>
       @endauth
+      @if (count($comments) > 0)
       @foreach ($comments as $comment)
       <article class="my-8">
         <div class="flex items-center mb-4 space-x-4">
@@ -92,6 +93,11 @@
         <p class="mb-3 font-light text-gray-500 dark:text-gray-400">{{ $comment->comment }}</p>
       </article>
       @endforeach
+      @else
+      <div class="flex justify-center h-[34.5vh]">
+        <p class="font-roboto text-3xl self-center opacity-60">No Comment</p>
+      </div>
+      @endif
     </div>
   </div>
 </main>
